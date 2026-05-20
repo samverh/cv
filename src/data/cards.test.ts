@@ -21,10 +21,10 @@ describe('cards', () => {
     expect(cards[3].kind).toBe('education');
   });
 
-  it('has a Side projects intro card before the project cards', () => {
+  it('has a Side Projects intro card before the project cards', () => {
     const intro = cards[4];
     if (intro.kind !== 'intro') throw new Error('wrong kind');
-    expect(intro.title).toBe('Side projects');
+    expect(intro.title).toBe('Side Projects');
   });
 
   it('ends with 3 project cards in positions 5-7', () => {
