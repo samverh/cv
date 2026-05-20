@@ -5,36 +5,52 @@
   text-align: center;
   height: 100%;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
 }
 .business-card__photo {
-  width: 120px;
-  height: 120px;
+  width: 116px;
+  height: 116px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  border: 1px solid var(--border-strong);
+  filter: grayscale(0.15) contrast(1.05);
 }
 .business-card__name {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   margin: 0;
+  color: var(--text);
 }
 .business-card__title {
-  font-size: 1rem;
-  color: #666;
-  margin: 0;
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 6px 0 0;
 }
 .business-card__location {
-  font-size: 0.9rem;
-  color: #888;
-  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+  font-weight: 300;
 }
 .business-card__links {
   display: flex;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 20px;
+  margin-top: 22px;
 }
 .business-card__links a {
-  color: #2076d2;
+  color: var(--text-muted);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+.business-card__links a:hover {
+  color: var(--accent);
 }

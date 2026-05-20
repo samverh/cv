@@ -67,7 +67,7 @@ export const cards: CardData[] = [
   {
     kind: 'project',
     title: 'Project Two',
-    image: '/cv/images/project-2.jpg',
+    image: '/cv/images/project-2.png',
     description: 'Placeholder description. Replace with a real project.',
     tech: ['TypeScript', 'React'],
   },
@@ -77,13 +77,6 @@ export const cards: CardData[] = [
     image: '/cv/images/project-3.jpg',
     description: 'Placeholder description. Replace with a real project.',
     tech: ['R', 'tidyverse'],
-  },
-  {
-    kind: 'project',
-    title: 'Project Four',
-    image: '/cv/images/project-4.jpg',
-    description: 'Placeholder description. Replace with a real project.',
-    tech: ['PHP', 'MySQL'],
   },
   {
     kind: 'experience',

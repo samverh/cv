@@ -9,6 +9,7 @@ export default function App() {
         className="app__background"
         style={{ backgroundImage: 'url(/cv/images/background_1.jpg)' }}
       />
+      <div className="app__overlay" aria-hidden="true" />
       <main className="app__main">
         <CardStack cards={cards} />
       </main>

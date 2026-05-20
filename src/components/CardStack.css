@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
 }
 .card-stack__deck {
   position: relative;
@@ -25,32 +25,43 @@
 .card-stack__controls {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 .card-stack__controls button {
-  background: rgba(255, 255, 255, 0.85);
-  border: none;
-  width: 44px;
-  height: 44px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.card-stack__controls button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 .card-stack__counter {
-  color: #fff;
-  font-weight: 600;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  color: var(--text-muted);
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
   min-width: 56px;
   text-align: center;
 }
 .card-stack__hint {
   position: absolute;
-  bottom: -36px;
+  bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
-  color: #fff;
-  font-size: 0.9rem;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  color: var(--text-dim);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   pointer-events: none;
+  font-weight: 300;
 }
