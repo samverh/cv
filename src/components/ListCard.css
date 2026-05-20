@@ -1,0 +1,34 @@
+.list-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.list-card__title {
+  font-size: 1.3rem;
+  margin: 0 0 16px 0;
+}
+.list-card__entries {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+}
+.list-card__entry {
+  border-left: 3px solid #2076d2;
+  padding-left: 10px;
+}
+.list-card__period {
+  font-size: 0.78rem;
+  color: #888;
+}
+.list-card__primary {
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.list-card__secondary {
+  font-size: 0.88rem;
+  color: #555;
+}
