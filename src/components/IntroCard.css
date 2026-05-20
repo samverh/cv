@@ -1,0 +1,35 @@
+.intro-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  gap: 14px;
+}
+.intro-card__mark {
+  width: 21px;
+  height: 1.7px;
+  background: var(--accent);
+  display: block;
+  margin-bottom: 6px;
+}
+.intro-card__title + .intro-card__mark {
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+.intro-card__title {
+  font-size: 2.1rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  margin: 0;
+  color: var(--text);
+}
+.intro-card__subtitle {
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+}

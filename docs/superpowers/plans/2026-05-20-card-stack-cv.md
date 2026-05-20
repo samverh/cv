@@ -383,7 +383,7 @@ export const cards: CardData[] = [
   {
     kind: 'project',
     title: 'Project One',
-    image: '/cv/images/project-1.jpg',
+    image: '/cv/images/project-1.png',
     description: 'Placeholder description. Replace with a real project.',
     tech: ['Python', 'PyTorch'],
   },
@@ -397,7 +397,7 @@ export const cards: CardData[] = [
   {
     kind: 'project',
     title: 'Project Three',
-    image: '/cv/images/project-3.jpg',
+    image: '/cv/images/project-3.png',
     description: 'Placeholder description. Replace with a real project.',
     tech: ['R', 'tidyverse'],
   },
@@ -742,7 +742,7 @@ import type { ProjectCardData } from '../data/cards';
 const baseData: ProjectCardData = {
   kind: 'project',
   title: 'Project One',
-  image: '/cv/images/project-1.jpg',
+  image: '/cv/images/project-1.png',
   description: 'A placeholder description.',
   tech: ['Python', 'PyTorch'],
 };
@@ -759,7 +759,7 @@ describe('ProjectCard', () => {
   it('renders the project image', () => {
     render(<ProjectCard data={baseData} />);
     const img = screen.getByAltText('Project One') as HTMLImageElement;
-    expect(img.src).toContain('/cv/images/project-1.jpg');
+    expect(img.src).toContain('/cv/images/project-1.png');
   });
 
   it('shows a link button when link is provided', () => {

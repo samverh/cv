@@ -43,14 +43,18 @@
   margin-top: 22px;
 }
 .business-card__links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-muted);
   text-decoration: none;
-  font-weight: 400;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   transition: color 0.2s ease;
 }
 .business-card__links a:hover {
   color: var(--accent);
+}
+.business-card__icon {
+  width: 22px;
+  height: 22px;
+  display: block;
 }

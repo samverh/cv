@@ -1,21 +1,21 @@
 // src/components/swipeThreshold.ts
-export type SwipeDirection = 'left' | 'right';
+export type SwipeDirection = 'up' | 'down';
 
 const DISTANCE_THRESHOLD = 100;
 const VELOCITY_THRESHOLD = 500;
 
 export function shouldDismiss({
-  offsetX,
-  velocityX,
+  offsetY,
+  velocityY,
 }: {
-  offsetX: number;
-  velocityX: number;
+  offsetY: number;
+  velocityY: number;
 }): SwipeDirection | null {
-  if (offsetX > DISTANCE_THRESHOLD || velocityX > VELOCITY_THRESHOLD) {
-    return 'right';
+  if (offsetY < -DISTANCE_THRESHOLD || velocityY < -VELOCITY_THRESHOLD) {
+    return 'up';
   }
-  if (offsetX < -DISTANCE_THRESHOLD || velocityX < -VELOCITY_THRESHOLD) {
-    return 'left';
+  if (offsetY > DISTANCE_THRESHOLD || velocityY > VELOCITY_THRESHOLD) {
+    return 'down';
   }
   return null;
 }

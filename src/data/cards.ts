@@ -39,8 +39,15 @@ export type EducationCardData = {
   entries: EducationEntry[];
 };
 
+export type IntroCardData = {
+  kind: 'intro';
+  title: string;
+  subtitle?: string;
+};
+
 export type CardData =
   | BusinessCardData
+  | IntroCardData
   | ProjectCardData
   | ExperienceCardData
   | EducationCardData;
@@ -50,7 +57,7 @@ export const cards: CardData[] = [
     kind: 'business',
     name: 'Sam Verhezen',
     title: 'Computational Scientist',
-    location: 'Maastricht, NL',
+    location: 'Utrecht, NL',
     photo: '/cv/images/profiel_3.jpg',
     links: {
       linkedin: 'https://www.linkedin.com/in/samverhezen/',
@@ -58,29 +65,20 @@ export const cards: CardData[] = [
     },
   },
   {
-    kind: 'project',
-    title: 'Project One',
-    image: '/cv/images/project-1.jpg',
-    description: 'Placeholder description. Replace with a real project.',
-    tech: ['Python', 'PyTorch'],
-  },
-  {
-    kind: 'project',
-    title: 'Project Two',
-    image: '/cv/images/project-2.png',
-    description: 'Placeholder description. Replace with a real project.',
-    tech: ['TypeScript', 'React'],
-  },
-  {
-    kind: 'project',
-    title: 'Project Three',
-    image: '/cv/images/project-3.jpg',
-    description: 'Placeholder description. Replace with a real project.',
-    tech: ['R', 'tidyverse'],
+    kind: 'intro',
+    title: 'CV',
+    subtitle: 'Experience & education',
   },
   {
     kind: 'experience',
     entries: [
+      {
+        period: 'October 2022 – Present',
+        company: 'In2Intel',
+        role: 'Data Scientist',
+        summary:
+          'Designing and delivering data science and AI solutions for clients across industries.',
+      },
       {
         period: 'April 2022 – April 2023',
         company: 'AppsForce',
@@ -129,5 +127,33 @@ export const cards: CardData[] = [
         school: 'Artesis Plantijn Hogeschool Antwerpen',
       },
     ],
+  },
+  {
+    kind: 'intro',
+    title: 'Side projects',
+  },
+  {
+    kind: 'project',
+    title: 'Billies',
+    image: '/cv/images/project-1.png',
+    description:
+      'Invoicing web app for freelancers and small businesses, built with Django.',
+    tech: ['Python', 'Django'],
+  },
+  {
+    kind: 'project',
+    title: 'Gallery Marie',
+    image: '/cv/images/project-2.png',
+    description:
+      'A free, static web app to showcase Marie’s artwork in a clean online gallery.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    kind: 'project',
+    title: 'Memoiry',
+    image: '/cv/images/project-3.png',
+    description:
+      'A web app for storing and revisiting your life timeline — memories, milestones, and moments.',
+    tech: ['TypeScript', 'React', 'Next.js'],
   },
 ];
