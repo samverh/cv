@@ -45,10 +45,16 @@ function DraggableTop({
 
 export function CardStack({ cards }: { cards: CardData[] }) {
   const [topIndex, setTopIndex] = useState(0);
+  const [hintVisible, setHintVisible] = useState(true);
 
-  const advance = () => setTopIndex((i) => (i + 1) % cards.length);
-  const retreat = () =>
+  const advance = () => {
+    setHintVisible(false);
+    setTopIndex((i) => (i + 1) % cards.length);
+  };
+  const retreat = () => {
+    setHintVisible(false);
     setTopIndex((i) => (i - 1 + cards.length) % cards.length);
+  };
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -90,6 +96,11 @@ export function CardStack({ cards }: { cards: CardData[] }) {
               <CardView card={card} />
             </div>
           ),
+        )}
+        {hintVisible && (
+          <div className="card-stack__hint" aria-hidden="true">
+            drag me →
+          </div>
         )}
       </div>
       <div className="card-stack__controls">

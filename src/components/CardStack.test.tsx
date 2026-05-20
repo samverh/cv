@@ -68,4 +68,11 @@ describe('CardStack navigation', () => {
     fireEvent.keyDown(window, { key: 'ArrowLeft' });
     expect(screen.getByText('Sam')).toBeInTheDocument();
   });
+
+  it('shows a drag hint initially and hides it after first advance', () => {
+    render(<CardStack cards={sample} />);
+    expect(screen.getByText(/drag me/i)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /next/i }));
+    expect(screen.queryByText(/drag me/i)).toBeNull();
+  });
 });
