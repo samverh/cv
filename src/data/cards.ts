@@ -130,7 +130,7 @@ export const cards: CardData[] = [
   },
   {
     kind: 'intro',
-    title: 'Side projects',
+    title: 'Side Projects',
   },
   {
     kind: 'project',
