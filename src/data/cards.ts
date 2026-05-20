@@ -58,7 +58,7 @@ export const cards: CardData[] = [
     name: 'Sam Verhezen',
     title: 'Computational Scientist',
     location: 'Utrecht, NL',
-    photo: '/cv/images/prof.png',
+    photo: '/cv/images/profiel_2.jpg',
     links: {
       linkedin: 'https://www.linkedin.com/in/samverhezen/',
       github: 'https://github.com/samverh',
